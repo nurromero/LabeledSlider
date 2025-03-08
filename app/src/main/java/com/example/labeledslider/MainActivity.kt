@@ -50,13 +50,14 @@ fun LabelSlider(modifier:  Modifier = Modifier) {
         modifier = modifier.padding(8.dp)
     ) {
 
+        Text(text = "Slider Value: ${sliderPosition.toInt()}", modifier = Modifier.padding(top = 8.dp))
         Slider(
             value = sliderPosition,
             onValueChange = {  sliderPosition = it },
             valueRange = 0f..100f,
             modifier = Modifier.fillMaxWidth()
         )
-        Text(text = "Slider Value: ${sliderPosition.toInt()}", modifier = Modifier.padding(top = 8.dp))
+
 
     }
 
